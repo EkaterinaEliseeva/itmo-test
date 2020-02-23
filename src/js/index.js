@@ -1,9 +1,10 @@
-(function() {
+document.addEventListener('DOMContentLoaded', function() {
+
     const burger = document.querySelector('.header__burger');
     const navMenu = document.querySelector('.nav');
     const disciplines = document.querySelectorAll('.disciplines__name');
     const disciplinesText = document.querySelectorAll('.disciplines__description');
-
+    const bodyBlock = document.querySelector('.body');
 
     if (!burger || !navMenu || !disciplines || !disciplinesText) {
         return;
@@ -50,14 +51,21 @@
         console.log('a');
 
         popupWriteUs.classList.add('active');
+        bodyBlock.classList.add('noscroll');
+
+        window.addEventListener('scroll',function(e){
+            e.preventDefault();
+        });
 
         const popupCloseBtn = document.querySelector('.popup-write-us__close');
+
 
         if (popupCloseBtn) {
             popupCloseBtn.addEventListener('click', function(evt) {
                 evt.preventDefault();
 
                 popupWriteUs.classList.remove('active');
+                bodyBlock.classList.remove('noscroll');
             });
         }
 
@@ -65,6 +73,4 @@
 
 
     });
-
-
-})();
+});

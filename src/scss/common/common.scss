@@ -3,6 +3,15 @@ body {
   font-family: OpenSans, Arial, sans-serif;
   font-size: $mainFontSize;
   line-height: $mainLineHeight;
+  position: relative;
+
+  .body {
+    &.noscroll {
+      overflow: hidden;
+    }
+  }
+
+
 
   @media screen and (max-width: $small - 1) {
     font-size: 12px;

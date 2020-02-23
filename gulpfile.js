@@ -81,6 +81,16 @@ gulp.task("server", function () {
     gulp.watch("src/js/*.js", gulp.series("js", "refresh"));
 });
 
+gulp.task("prodServer", function () {
+    server.init({
+        server: "build/",
+        notify: false,
+        open: true,
+        cors: true,
+        ui: false
+    });
+});
+
 gulp.task("build", gulp.series(
     "clean",
     "copy",
@@ -91,4 +101,6 @@ gulp.task("build", gulp.series(
     "html"
 ));
 
-gulp.task("start", gulp.series("build", "server"));
+gulp.task("devstart", gulp.series("build", "server"));
+
+gulp.task("start", gulp.series("prodServer"));
