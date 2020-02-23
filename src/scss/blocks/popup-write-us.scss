@@ -1,5 +1,4 @@
 .popup-write-us {
-  padding: rem(20) 0;
   position: absolute;
   overflow-y: auto;
   top: 0;
@@ -8,7 +7,6 @@
   height: 100vh;
   display: none;
   justify-content: center;
-  align-items: center;
   transition: 0.3s;
 
   &.active {
@@ -40,6 +38,7 @@
 
 
   &__wrapper {
+    margin: rem(20) 0;
     transition: 0.3s;
     background-color: $white;
     opacity: 1;
