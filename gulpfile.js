@@ -88,7 +88,7 @@ gulp.task("prodServer", function () {
         open: true,
         cors: true,
         ui: false
-    });
+    })
 });
 
 gulp.task("build", gulp.series(
@@ -103,4 +103,4 @@ gulp.task("build", gulp.series(
 
 gulp.task("devstart", gulp.series("build", "server"));
 
-gulp.task("start", gulp.series("prodServer"));
+gulp.task("start", "prodServer");

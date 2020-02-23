@@ -5,6 +5,7 @@
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp start",
+    "devStart": "gulp devstart",
     "build": "gulp build"
   },
   "author": "",
