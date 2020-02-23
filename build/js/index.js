@@ -39,6 +39,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const popupWriteUsWrapper = document.querySelector('.popup-write-us__wrapper');
 
+
+    console.log(document.body.offsetHeight);
     if (document.body.offsetHeight > POPUP_HEIGHT) {
         if (!popupWriteUsWrapper.classList.contains('center')) {
             popupWriteUsWrapper.classList.add('center');
