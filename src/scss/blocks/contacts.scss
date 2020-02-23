@@ -2,17 +2,35 @@
   background-image: url("../img/map.png");
   background-position: center center;
   background-size: cover;
+  position: relative;
+
+  &__iframe {
+    width: 100%;
+    min-height: rem(470);
+
+    @media screen and (max-width: $medium) {
+      display: none;
+    }
+  }
 
   &__container {
-    padding-top: rem(80);
-    padding-bottom: rem(80);
+    @media screen and (max-width: $medium) {
+      padding-top: rem(80);
+      padding-bottom: rem(80);
+    }
   }
 
   &__wrapper {
     padding: rem(40) rem(71);
-    width: rem(500);
+    width: rem(490);
     background-color: $white;
     border-radius: rem(8);
+    position: absolute;
+    top: rem(80);
+
+    @media screen and (max-width: $medium) {
+      position: static;
+    }
 
     @media screen and (max-width: $small) {
       width: 100%;
@@ -29,6 +47,10 @@
   &__text {
     width: rem(345);
     padding-bottom: rem(12);
+
+    @media screen and (max-width: $large) {
+      width: rem(300);
+    }
 
     @media screen and (max-width: $small) {
       width: auto;
@@ -58,6 +80,7 @@
       transform: translateY(rem(-8));
       background-image: url("../img/mail.svg");
     }
+
     @media screen and (max-width: 400px) {
       width: 100%;
       margin: 0 auto;

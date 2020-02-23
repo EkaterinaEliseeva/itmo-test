@@ -54,6 +54,15 @@
   &__item {
     display: none;
 
+    &.right {
+      animation: sliderRight 0.5s ease-in;
+    }
+
+    &.left {
+      animation: sliderLeft 0.5s ease-in;
+    }
+
+
     &.active {
       display: flex;
       flex-direction: column;

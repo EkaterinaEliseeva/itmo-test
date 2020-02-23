@@ -200,6 +200,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
             setTimeout(function() {
 
+                form.reset();
+
                 popupWriteUs.classList.remove('active');
 
                 popupSuccess.classList.add('active');
@@ -221,16 +223,30 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
     }
 
+    function removeAnimationClass(activeItem) {
+        if (activeItem.classList.contains('right')) {
+            activeItem.classList.remove('right');
+        }
+
+        if (activeItem.classList.contains('left')) {
+            activeItem.classList.remove('left');
+        }
+    }
+
     sliderNextBtn.addEventListener('click', function(evt) {
         evt.preventDefault();
 
         const activeItem = document.querySelector('.slider__item.active');
+
+        removeAnimationClass(activeItem);
 
         const arr = Array.from(sliderArray);
 
         const index = arr.indexOf(activeItem);
 
         activeItem.classList.remove('active');
+
+        sliderArray[(index + 1) % sliderArray.length].classList.add('right');
 
         sliderArray[(index + 1) % sliderArray.length].classList.add('active');
 
@@ -240,6 +256,8 @@ document.addEventListener('DOMContentLoaded', function() {
         evt.preventDefault();
 
         const activeItem = document.querySelector('.slider__item.active');
+
+        removeAnimationClass(activeItem);
 
         const arr = Array.from(sliderArray);
 
@@ -251,6 +269,7 @@ document.addEventListener('DOMContentLoaded', function() {
             index = arr.length - 1;
         }
 
+        sliderArray[index].classList.add('left');
 
         sliderArray[index].classList.add('active');
 
