@@ -42,7 +42,7 @@
 
 
   &__wrapper {
-    margin: rem(20) 0;
+    margin: rem(20);
     transition: 0.3s;
     background-color: $white;
     opacity: 1;
@@ -54,7 +54,21 @@
     position: relative;
     height: auto;
     min-height: 700px;
+    z-index: 10;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
 
+    @media screen and (max-width: $extraLarge) {
+      padding: rem(60);
+    }
+
+    @media screen and (max-width: $medium) {
+      width: auto;
+      padding: rem(40);
+    }
+
+    @media screen and (max-width: $small) {
+      padding: rem(40) rem(20);
+    }
 
     &.center {
       margin: 0;
@@ -62,9 +76,7 @@
       transform: translateY(-50%);
     }
 
-    @media screen and (max-width: $extraLarge) {
-      padding: rem(60);
-    }
+
   }
 
   form {
@@ -148,6 +160,11 @@
     position: absolute;
     top: rem(24);
     right: rem(24);
+
+    @media screen and (max-width: $small) {
+      top: rem(14);
+      right: rem(14);
+    }
 
     &:hover,
     &:active {

@@ -19,6 +19,17 @@
       align-items: flex-start;
       text-align: left
     }
+
+    @media screen and (max-width: $medium - 1) {
+      padding-right: rem(60);
+      padding-left: rem(60);
+    }
+
+    @media screen and (max-width: $small) {
+      padding-right: rem(10);
+      padding-left: rem(10);
+    }
+
   }
 
   &__title {

@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     burger.addEventListener('click', function(evt) {
         evt.preventDefault();
-        console.log(1);
 
         if (burger.classList.contains('active')) {
             burger.classList.remove('active');
@@ -39,8 +38,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const popupWriteUsWrapper = document.querySelector('.popup-write-us__wrapper');
 
-
-    console.log(document.body.offsetHeight);
     if (document.body.offsetHeight > POPUP_HEIGHT) {
         if (!popupWriteUsWrapper.classList.contains('center')) {
             popupWriteUsWrapper.classList.add('center');
