@@ -1,5 +1,6 @@
 .popup-write-us {
-  position: fixed;
+  padding: rem(20) 0;
+  position: absolute;
   overflow-y: auto;
   top: 0;
   left: 0;
@@ -9,10 +10,13 @@
   justify-content: center;
   align-items: center;
   transition: 0.3s;
-  z-index: 3;
 
   &.active {
     display: flex;
+  }
+
+  &__container {
+
   }
 
   .opacity {
