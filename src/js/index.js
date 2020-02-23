@@ -58,7 +58,17 @@ document.addEventListener('DOMContentLoaded', function() {
         });
 
         const popupCloseBtn = document.querySelector('.popup-write-us__close');
+        const popupWriteUsWrapper = document.querySelector('.opacity');
 
+
+        popupWriteUsWrapper.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            if (e.target === popupWriteUsWrapper) {
+                popupWriteUs.classList.remove('active');
+                bodyBlock.classList.remove('noscroll');
+            }
+        });
 
         if (popupCloseBtn) {
             popupCloseBtn.addEventListener('click', function(evt) {
