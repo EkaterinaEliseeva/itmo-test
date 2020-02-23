@@ -30,13 +30,6 @@
   }
 
   &_left {
-    left: rem(-32);
-
-
-    @media screen and (max-width: $large) {
-      left: 50%;
-      transform: translateX(rem(-50));
-    }
 
     @media screen and (max-width: $medium - 1) {
       left: rem(60);
@@ -46,18 +39,30 @@
       left: 50%;
       transform: translateX(rem(-50));
     }
+
+    @media screen and (min-width: $medium) {
+      left: 50%;
+      transform: translateX(rem(-50));
+    }
+
+    @media screen and (min-width: $large) {
+      left: 0;
+      transform: none;
+    }
+
+    @media screen and (min-width: $extraLarge) {
+      left: 0;
+    }
+
+    @media screen and (min-width: 1600px) {
+      left: rem(-60);
+    }
+
   }
 
   &_right {
-    right: rem(-32);
-
     img {
       transform: rotate(180deg);
-    }
-
-    @media screen and (max-width: $large) {
-      right: 50%;
-      transform: translateX(rem(50));
     }
 
     @media screen and (max-width: $medium - 1) {
@@ -68,6 +73,34 @@
       right: 50%;
       transform: translateX(rem(50));
     }
+
+    @media screen and (min-width: $medium) {
+      right: 50%;
+      transform: translateX(rem(50));
+    }
+
+    @media screen and (min-width: $large) {
+      right: 0;
+      transform: none;
+    }
+
+
+    @media screen and (min-width: $extraLarge) {
+      right: 0;
+    }
+
+    @media screen and (min-width: 1600px) {
+      right: rem(-60);
+    }
+
+
+
+
+
+
+
+
+
 
   }
 }
