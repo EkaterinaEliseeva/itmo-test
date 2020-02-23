@@ -5,23 +5,11 @@
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp start",
-    "devStart": "gulp devstart",
     "build": "gulp build"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "autoprefixer": "^9.7.4",
-    "browser-sync": "^2.26.7",
-    "del": "^5.1.0",
-    "gulp": "^4.0.2",
-    "gulp-copy": "^4.0.1",
-    "gulp-csso": "^4.0.1",
-    "gulp-plumber": "^1.2.1",
-    "gulp-postcss": "^8.0.0",
-    "gulp-sass": "^4.0.2"
-  },
-  "dependencies": {
     "autoprefixer": "^9.7.4",
     "browser-sync": "^2.26.7",
     "del": "^5.1.0",
