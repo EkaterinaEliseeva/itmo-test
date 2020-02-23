@@ -1,0 +1,138 @@
+.popup-write-us {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: 100vh;
+  height: auto;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  overflow: hidden;
+
+  &.active {
+    display: flex;
+  }
+
+  .opacity {
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    opacity: 0.5;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #232473;
+  }
+
+  &__title {
+    font-size: rem(32);
+    line-height: rem(38);
+    text-align: center;
+    margin-bottom: rem(40);
+    color: #000000;
+  }
+
+
+  &__wrapper {
+    transition: 0.3s;
+    background-color: $white;
+    opacity: 1;
+    padding: rem(80);
+    border-radius: rem(16);
+    display: flex;
+    flex-direction: column;
+    width: rem(545);
+    position: relative;
+  }
+
+  form {
+
+    display: flex;
+    flex-direction: column;
+
+    input,
+    textarea {
+      border: 1px solid $border-color;
+      font-size: rem(14);
+      line-height: rem(19);
+      padding: rem(10) rem(15);
+      color: #C1C3C4;
+      margin-bottom: rem(14);
+      transition: border-color 0.3s;
+      font-family: OpenSans, Arial, sans-serif;
+    }
+  }
+
+
+
+
+  input:focus,
+  textarea:focus {
+    border-color: #cccccc;
+  }
+
+  textarea {
+    height: rem(96);
+  }
+
+  label {
+    font-weight: 600;
+    font-size: rem(14);
+    line-height: rem(20);
+    padding-bottom: rem(4);
+
+    span {
+      color: #F21F5B;
+    }
+  }
+
+  p {
+    font-size: rem(14);
+    line-height: rem(19);
+    margin-bottom: rem(32);
+
+    a {
+      color: #3951E3;
+
+      &:hover,
+      &:active {
+        opacity: 0.7;
+      }
+    }
+  }
+
+  &__btn.btn {
+    max-width: rem(162);
+    margin: 0 auto;
+    background-color: #3951E7;
+    border-radius: rem(50);
+    position: relative;
+    padding: rem(13) rem(24) rem(13) rem(52);
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 50%;
+      left: rem(24);
+      width: rem(16);
+      height: rem(16);
+      transform: translateY(rem(-8));
+      background-image: url("../img/mail.svg");
+    }
+
+  }
+
+  &__close {
+    position: absolute;
+    top: rem(24);
+    right: rem(24);
+
+    &:hover,
+    &:active {
+      opacity: 0.7;
+    }
+  }
+
+}

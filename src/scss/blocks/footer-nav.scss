@@ -1,0 +1,46 @@
+.footer-nav {
+  display: flex;
+  width: calc(100% / 3 + 70px);
+  margin-left: 30px;
+
+  @media screen and (max-width: 500px) {
+    flex-wrap: wrap;
+  }
+
+  @media screen and (max-width: $large) {
+    width: calc(50% - 30px);
+  }
+
+  @media screen and (max-width: 900px) {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    margin-left: 0;
+  }
+
+  &__list:not(:last-child) {
+    margin-right: rem(32);
+  }
+
+  &__list {
+    @media screen and (max-width: 500px) {
+      width: 100%;
+
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__link {
+    color: $white;
+    font-size: rem(14);
+    line-height: rem(24);
+
+    &:hover,
+    &:active {
+      opacity: 0.7;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+body {
+  color: $text-color;
+  font-family: OpenSans, Arial, sans-serif;
+  font-size: $mainFontSize;
+  line-height: $mainLineHeight;
+
+  @media screen and (max-width: $small - 1) {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  @media screen and (min-width: $small) {
+    font-size: 13px;
+    line-height: 18px;
+  }
+
+  @media screen and (min-width: $medium) {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  @media screen and (min-width: $large) {
+    font-size: 15px;
+    line-height: 22px;
+  }
+
+  @media screen and (min-width: $extraLarge) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}

@@ -1,0 +1,75 @@
+.disciplines {
+  padding: rem(24) 0 rem(80) 0;
+
+  &__container {
+    width: rem(800);
+
+    @media screen and (max-width: $large) {
+      width: auto;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    font-family: Muller, Arial, sans-serif;
+    font-weight: 600;
+    font-size: rem(40);
+    line-height: rem(40);
+    padding-bottom: rem(40);
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    width: 100%;
+    border: 1px solid $border-color;
+    border-radius: rem(8);
+    margin-bottom: rem(6);
+  }
+
+  &__name {
+    width: 100%;
+    font-weight: 600;
+    padding: rem(24) rem(32);
+    position: relative;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &::after {
+      position: absolute;
+      content: '';
+      width: rem(16);
+      height: rem(10);
+      top: 50%;
+      transform: translateY(rem(-5));
+      right: rem(32);
+      background-image: url("../img/disc-arrow.svg");
+    }
+
+    &.active {
+      &::after {
+        background-image: url("../img/disc-arrow.svg");
+        transform: rotate(180deg) translateY(rem(5));
+      }
+    }
+
+  }
+
+  &__description {
+    display: none;
+    padding: 0 rem(104) rem(24) rem(32);
+
+    @media screen and (max-width: $small) {
+      padding: 0 rem(32) rem(24) rem(32);
+    }
+
+    &.active {
+      display: block;
+    }
+  }
+}

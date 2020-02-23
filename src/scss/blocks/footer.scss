@@ -1,0 +1,135 @@
+.footer {
+  margin-left: -30px;
+
+  &__top {
+    background-color: $bg-footer-top;
+    color: $white;
+    padding: rem(32) 0;
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+
+
+      @media screen and (max-width: $large) {
+        flex-wrap: wrap;
+      }
+
+      @media screen and (max-width: 900px) {
+        justify-content: center;
+        margin-left: 30px;
+      }
+
+    }
+  }
+
+  &__copyright {
+    width: calc(100% / 3 - 30px);
+    margin-left: 30px;
+
+    @media screen and (max-width: $large) {
+      width: calc(50% - 30px);
+    }
+
+    @media screen and (max-width: 900px) {
+      width: 100%;
+      padding-bottom: rem(20);
+      text-align: center;
+      margin-left: 0;
+    }
+  }
+
+  &__copyright-info {
+    font-size: rem(13);
+    line-height: rem(24);
+    opacity: 0.5;
+    width: rem(280);
+
+    @media screen and (max-width: 900px) {
+      margin: 0 auto;
+    }
+  }
+
+  &__logo {
+    width: rem(300);
+    margin-bottom: rem(24);
+  }
+
+
+  &__contacts-wrapper {
+    width: calc(100% / 3 - 130px);
+    margin-left: 30px;
+
+    @media screen and (max-width: $large) {
+      padding-top: rem(40);
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    @media screen and (max-width: 900px) {
+      padding-top: rem(20);
+      justify-content: center;
+      text-align: center;
+      flex-wrap: wrap;
+      margin-left: 0;
+    }
+  }
+
+  &__bottom {
+    background-color: $bg-footer-bottom;
+
+    .container {
+
+      padding: 0 rem(30);
+      display: flex;
+      justify-content: space-between;
+
+      @media screen and (max-width: 800px) {
+        margin-left: 30px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+
+    a {
+      color: $white;
+      mix-blend-mode: normal;
+      opacity: 0.5;
+      font-size: rem(13);
+      line-height: rem(18);
+      padding: rem(10) 0;
+
+      &:first-child {
+        margin-left: 30px;
+
+        @media screen and (max-width: 1200px) {
+          margin-left: 15px;
+        }
+
+        @media screen and (max-width: $large) {
+          margin-left: 30px;
+        }
+
+        @media screen and (max-width: 800px) {
+          margin-left: 0;
+        }
+      }
+
+
+
+      @media screen and (max-width: 800px) {
+        width: 100%;
+        text-align: center;
+      }
+
+      &:hover,
+      &:active {
+        opacity: 1;
+      }
+    }
+
+  }
+
+}

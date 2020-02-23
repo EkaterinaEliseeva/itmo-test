@@ -1,0 +1,13 @@
+.btn {
+  background-color: $btn-color;
+  border-radius: rem(50);
+  display: inline-block;
+  color: $text-color-second;
+  font-size: rem(16);
+  line-height: rem(32);
+
+  &:hover,
+  &:active {
+    opacity: 0.7;
+  }
+}

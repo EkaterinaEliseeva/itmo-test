@@ -1,0 +1,152 @@
+.header {
+
+  &__wrapper_sticky {
+    position: sticky;
+    top: 0;
+    background-color: $white;
+    opacity: 1;
+    z-index: 2;
+
+    @media screen and (min-width: $large) {
+      position: static;
+    }
+  }
+
+  &__wrapper {
+    background: $white;
+  }
+
+  &__wrapper_bg {
+    transition: 0.3s;
+    background: linear-gradient(90deg, #3951E7 20.77%, #832AB9 91.64%);
+  }
+
+  &__container {
+    padding: 0 rem(30);
+    width: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: $small) {
+      padding: 0 rem(10);
+    }
+
+    @media screen and (max-width: $large) {
+      position: relative;
+    }
+  }
+
+  &__logo {
+    height: rem(16);
+    width: auto;
+  }
+
+  &__logo-hexagon {
+    @media screen and (max-width: $small) {
+      width: rem(46);
+    }
+  }
+
+  &__switch-lang {
+    padding: rem(8) 0 rem(8) 0;
+    font-weight: 600;
+    font-size: rem(12);
+    line-height: rem(16);
+    color: $white;
+
+    &:hover,
+    &:active {
+      opacity: 0.7;
+    }
+
+    span {
+      padding-right: rem(8);
+    }
+
+    img {
+      width: rem(24);
+      height: rem(24);
+    }
+  }
+
+  &__title-wrapper {
+    display: flex;
+    align-items: center;
+    padding: rem(18) 0;
+  }
+
+  &__title {
+    color: $text-color;
+    font-size: rem(16);
+    line-height: rem(16);
+    padding-left: rem(10);
+    width: auto;
+    padding-right: rem(20);
+
+    @media screen and (min-width: $small) {
+      width: auto;
+      font-size: rem(18);
+      line-height: rem(18);
+      padding-left: rem(16);
+    }
+
+    @media screen and (min-width: $large) {
+      font-size: rem(20);
+      line-height: rem(20);
+    }
+
+    @media screen and (min-width: 1100px) {
+      font-size: rem(22);
+      line-height: rem(22);
+    }
+
+    @media screen and (min-width: $extraLarge) {
+      font-size: rem(28);
+      line-height: rem(28);
+    }
+
+  }
+
+  &__burger {
+    cursor: pointer;
+
+    .b1,
+    .b2,
+    .b3 {
+      width: rem(36);
+      height: rem(5);
+      background-color: $text-color;
+      margin: rem(5) 0;
+      transition: 0.3s;
+      border-radius: rem(1);
+    }
+
+    &.active .b1 {
+      transform: rotate(-45deg) translateY(rem(14));
+    }
+    &.active .b3 {
+      transform: rotate(45deg) translateY(rem(-14));
+
+    }
+
+    &.active .b2 {
+      opacity: 0;
+    }
+
+    &.active .b1,
+    &.active .b3 {
+      width: rem(36);
+    }
+
+    &.active {
+      @media screen and (min-width: $large) {
+        display: block;
+      }
+    }
+
+    @media screen and (min-width: $large) {
+      display: none;
+    }
+  }
+}
