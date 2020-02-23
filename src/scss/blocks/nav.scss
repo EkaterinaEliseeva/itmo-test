@@ -15,7 +15,11 @@
   }
 
   &__item {
-
+    &:first-child {
+      @media screen and (max-width: $large) {
+        border-top: 1px solid $border-color;
+      }
+    }
   }
 
   &__link {
@@ -32,6 +36,7 @@
     &:hover {
       opacity: 0.7;
     }
+
 
     @media screen and (max-width: $small) {
       font-size: rem(12);

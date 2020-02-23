@@ -1,0 +1,66 @@
+.popup {
+  top: 0;
+  left: 0;
+  position: fixed;
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+
+  @media screen and (max-width: $medium) {
+    width: 100%;
+    padding: 0 30px;
+  }
+
+  h2 {
+    font-family: Muller, Arial, sans-serif;
+    font-weight: 700;
+    font-size: rem(28);
+    line-height: rem(36);
+
+    @media screen and (max-width: $medium) {
+      font-size: rem(20);
+      line-height: rem(26);
+    }
+  }
+
+  .opacity {
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    opacity: 0.5;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #232473;
+  }
+
+  &_success,
+  &_error {
+    display: none;
+
+    &.active {
+      display: flex;
+    }
+  }
+
+  &__close-btn {
+    top: rem(20);
+    right: rem(30);
+    position: absolute;
+
+    img {
+      pointer-events: none;
+    }
+  }
+
+  &__container {
+    position: relative;
+    padding: rem(50)  rem(30) rem(30) rem(30);
+    background-color: $white;
+    border-radius: rem(16);
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.16);
+
+  }
+}

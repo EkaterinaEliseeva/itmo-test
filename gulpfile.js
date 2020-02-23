@@ -32,6 +32,11 @@ gulp.task("copy", function () {
         .pipe(gulp.dest("build/fonts"))
 });
 
+gulp.task("plugins", function () {
+    return gulp.src("src/plugins/*")
+        .pipe(gulp.dest("build/plugins"))
+});
+
 gulp.task("img", function () {
     return gulp.src("src/img/*")
         .pipe(gulp.dest("build/img"))
@@ -84,6 +89,7 @@ gulp.task("server", function () {
 gulp.task("build", gulp.series(
     "clean",
     "copy",
+    "plugins",
     "img",
     // "svg",
     "css",

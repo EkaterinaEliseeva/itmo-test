@@ -97,12 +97,11 @@
     }
   }
 
-
-
-
   input:focus,
   textarea:focus {
     border-color: #cccccc;
+    color: $text-color-light;
+    opacity: 1;
   }
 
   textarea {
@@ -169,6 +168,18 @@
     &:hover,
     &:active {
       opacity: 0.7;
+    }
+  }
+
+  .error {
+    display: none;
+    margin-top: rem(-10);
+    font-size: rem(16);
+    padding-bottom: rem(16);
+
+    &.active {
+      display: inline;
+      color: $text-color-danger;
     }
   }
 

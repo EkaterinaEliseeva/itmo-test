@@ -57,17 +57,32 @@
         <main>
             <section class="slider">
                 <div class="container slider__container">
-                    <h1 class="title slider__title">
-                        Началась подача документов
-                    </h1>
-                    <p class="slider__text">
-                        Программа предполагает углубленное изучение вопросов,
-                        связанных с проектированием, исследованием, производством
-                        и эксплуатацией мехатронных и робототехнических&nbsp;систем и комплексов.
-                    </p>
-                    <a href="" class="btn slider__btn">
-                        Подробнее
-                    </a>
+                    <div class="slider__item active">
+                        <h1 class="title slider__title">
+                            Началась подача документов
+                        </h1>
+                        <p class="slider__text">
+                            Программа предполагает углубленное изучение вопросов,
+                            связанных с проектированием, исследованием, производством
+                            и эксплуатацией мехатронных и робототехнических&nbsp;систем и комплексов.
+                        </p>
+                        <a href="" class="btn slider__btn">
+                            Подробнее
+                        </a>
+                    </div>
+                    <div class="slider__item">
+                        <h1 class="title slider__title">
+                            Началась подача документов!
+                        </h1>
+                        <p class="slider__text">
+                            Программа предполагает углубленное изучение вопросов,
+                            связанных с проектированием, исследованием, производством
+                            и эксплуатацией мехатронных и робототехнических&nbsp;систем и комплексов.
+                        </p>
+                        <a href="" class="btn slider__btn">
+                            Подробнее
+                        </a>
+                    </div>
                     <a href="" class="arrow arrow_left">
                         <img src="img/arrow.svg" alt="">
                     </a>
@@ -344,29 +359,27 @@
                             <h4 class="social__title">
                                 Мы в соцсетях:
                             </h4>
-                            <ul>
-                                <ul class="social__list">
-                                    <li class="social__item">
-                                        <a href="">
-                                            <img src="img/icon-vk.svg" alt="">
-                                        </a>
-                                    </li>
-                                    <li class="social__item">
-                                        <a href="">
-                                            <img src="img/icon-fb.svg" alt="">
-                                        </a>
-                                    </li>
-                                    <li class="social__item">
-                                        <a href="">
-                                            <img src="img/icon-twitter.svg" alt="">
-                                        </a>
-                                    </li>
-                                    <li class="social__item">
-                                        <a href="">
-                                            <img src="img/icon-inst.svg" alt="">
-                                        </a>
-                                    </li>
-                                </ul>
+                            <ul class="social__list">
+                                <li class="social__item">
+                                    <a href="#">
+                                        <img src="img/icon-vk.svg" alt="Вконтакте">
+                                    </a>
+                                </li>
+                                <li class="social__item">
+                                    <a href="#">
+                                        <img src="img/icon-fb.svg" alt="Facebook">
+                                    </a>
+                                </li>
+                                <li class="social__item">
+                                    <a href="#">
+                                        <img src="img/icon-twitter.svg" alt="Twitter">
+                                    </a>
+                                </li>
+                                <li class="social__item">
+                                    <a href="#">
+                                        <img src="img/icon-inst.svg" alt="Instagram">
+                                    </a>
+                                </li>
                             </ul>
                         </div>
                     </div>
@@ -382,31 +395,50 @@
 
         </footer>
     </div>
-    <script src="js/index.js"></script>
-</body>
-<div class="popup-write-us">
-    <div class="opacity"></div>
-    <div class="popup-write-us__container">
-        <div class="popup-write-us__wrapper">
-            <a class="popup-write-us__close">
-                <img src="img/close-btn.svg" alt="Закрыть попап">
-            </a>
-            <h2 class="title popup-write-us__title">Напишите нам!</h2>
-            <form action="">
-                <label for="name">Ваши фамилия и имя <span>*</span></label>
-                <input type="text" id="name" placeholder="Введите ваше имя">
-                <label for="email">Электронная почта <span>*</span></label>
-                <input type="email" id="email" placeholder="primer@itmo.ru">
-                <label for="phone">Телефон <span>*</span></label>
-                <input type="tel" id="phone" placeholder="Введите ваш телефон">
-                <label for="info">Что непонятно или нужно уточнить </label>
-                <textarea name="" id="info" maxlength="300" placeholder="Введите ваше сообщение"></textarea>
-                <p>Отправляя данную форму, вы даете согласие на обработку своих <a href="">Персональных данных</a></p>
-                <a href="" class="btn popup-write-us__btn">Отправить</a>
-            </form>
+    <div class="popup-write-us">
+        <div class="opacity"></div>
+        <div class="popup-write-us__container">
+            <div class="popup-write-us__wrapper">
+                <a class="popup-write-us__close">
+                    <img src="img/close-btn.svg" alt="Закрыть попап">
+                </a>
+                <h2 class="title popup-write-us__title">Напишите нам!</h2>
+                <form action="">
+                    <label for="name">Ваши фамилия и имя <span>*</span></label>
+                    <input type="text" id="name" placeholder="Введите ваше имя" required>
+                    <label for="email">Электронная почта <span>*</span></label>
+                    <input type="email" id="email" placeholder="primer@itmo.ru" required>
+                    <label for="phone">Телефон <span>*</span></label>
+                    <input type="tel" id="phone" placeholder="Введите ваш телефон" required>
+                    <label for="message">Что непонятно или нужно уточнить </label>
+                    <textarea name="" id="message" maxlength="300" placeholder="Введите ваше сообщение"></textarea>
+                    <p>Отправляя данную форму, вы даете согласие на обработку своих <a href="">Персональных данных</a></p>
+                    <span class="error"></span>
+                    <button type="submit" class="btn popup-write-us__btn">Отправить</button>
+                </form>
+            </div>
         </div>
     </div>
+    <div class="popup popup_success">
+        <div class="opacity"></div>
+        <div class="popup__container">
+            <a class="popup__close-btn popup_success__close-btn">
+                <img src="img/close-btn.svg" alt="Закрыть попап">
+            </a>
+            <h2>Спасибо за обратную связь!</h2>
+        </div>
+    </div>
+    <div class="popup popup_error">
+        <div class="opacity"></div>
+        <div class="popup__container">
+            <a class="popup__close-btn popup_error__close-btn">
+                <img src="img/close-btn.svg" alt="Закрыть попап">
+            </a>
+            <h2>Отправка не завершена, попробуйте еще раз!</h2>
+        </div>
+    </div>
+    <script src="js/index.js"></script>
+    <script src="plugins/imask.js" type="text/javascript"></script>
+</body>
 
-
-</div>
 </html>
