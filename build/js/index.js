@@ -4,7 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const navMenu = document.querySelector('.nav');
     const disciplines = document.querySelectorAll('.disciplines__name');
     const disciplinesText = document.querySelectorAll('.disciplines__description');
-    const bodyBlock = document.querySelector('.body');
 
     if (!burger || !navMenu || !disciplines || !disciplinesText) {
         return;
@@ -41,6 +40,8 @@ document.addEventListener('DOMContentLoaded', function() {
     /* popup */
     const openPopupBtn = document.querySelector('.contacts__btn');
     const popupWriteUs = document.querySelector('.popup-write-us');
+    const opacityBlock = document.querySelector('.opacity');
+    const popup = document.querySelector('.popup-write-us__wrapper');
 
     if (!openPopupBtn || !popupWriteUs) {
         return;
@@ -48,14 +49,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     openPopupBtn.addEventListener('click', function(evt) {
         evt.preventDefault();
-        console.log('a');
 
         popupWriteUs.classList.add('active');
-        bodyBlock.classList.add('noscroll');
+        console.log(popup.scrollHeight);
+        opacityBlock.style.height = popup.scrollHeight;
 
-        window.addEventListener('scroll',function(e){
-            e.preventDefault();
-        });
 
         const popupCloseBtn = document.querySelector('.popup-write-us__close');
         const popupWriteUsWrapper = document.querySelector('.opacity');
@@ -66,7 +64,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
             if (e.target === popupWriteUsWrapper) {
                 popupWriteUs.classList.remove('active');
-                bodyBlock.classList.remove('noscroll');
             }
         });
 
@@ -75,7 +72,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 evt.preventDefault();
 
                 popupWriteUs.classList.remove('active');
-                bodyBlock.classList.remove('noscroll');
             });
         }
 

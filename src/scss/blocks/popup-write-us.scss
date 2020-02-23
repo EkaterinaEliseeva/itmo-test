@@ -1,10 +1,10 @@
 .popup-write-us {
   position: fixed;
+  overflow-y: auto;
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 100%;
-  height: auto;
+  height: 100vh;
   display: none;
   justify-content: center;
   align-items: center;
@@ -17,10 +17,10 @@
 
   .opacity {
     width: 100%;
-    min-height: 100%;
+    min-height: 100vh;
     height: auto;
     opacity: 0.5;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     background: #232473;
@@ -45,7 +45,7 @@
     flex-direction: column;
     width: rem(545);
     position: relative;
-    overflow: auto;
+    height: auto;
 
     @media screen and (max-width: $extraLarge) {
       padding: rem(60);
