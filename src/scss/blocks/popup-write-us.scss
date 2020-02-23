@@ -9,6 +9,10 @@
   justify-content: center;
   transition: 0.3s;
 
+  &.center {
+    align-items: center;
+  }
+
   &.active {
     display: flex;
   }
@@ -49,6 +53,14 @@
     width: rem(545);
     position: relative;
     height: auto;
+    min-height: 700px;
+
+
+    &.center {
+      margin: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
 
     @media screen and (max-width: $extraLarge) {
       padding: rem(60);

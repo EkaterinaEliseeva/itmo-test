@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const navMenu = document.querySelector('.nav');
     const disciplines = document.querySelectorAll('.disciplines__name');
     const disciplinesText = document.querySelectorAll('.disciplines__description');
+    const POPUP_HEIGHT = 700;
 
     if (!burger || !navMenu || !disciplines || !disciplinesText) {
         return;
@@ -36,24 +37,33 @@ document.addEventListener('DOMContentLoaded', function() {
         })
     });
 
+    const popupWriteUsWrapper = document.querySelector('.popup-write-us__wrapper');
+
+    if (document.body.offsetHeight > POPUP_HEIGHT) {
+        if (!popupWriteUsWrapper.classList.contains('center')) {
+            popupWriteUsWrapper.classList.add('center');
+        }
+    } else {
+        if (popupWriteUsWrapper.classList.contains('center')) {
+            popupWriteUsWrapper.classList.remove('center');
+        }
+    }
 
     /* popup */
     const openPopupBtn = document.querySelector('.contacts__btn');
     const popupWriteUs = document.querySelector('.popup-write-us');
-    const opacityBlock = document.querySelector('.opacity');
-    const popup = document.querySelector('.popup-write-us__wrapper');
+
 
     if (!openPopupBtn || !popupWriteUs) {
         return;
     }
 
+
+
     openPopupBtn.addEventListener('click', function(evt) {
         evt.preventDefault();
 
         popupWriteUs.classList.add('active');
-        console.log(popup.scrollHeight);
-        opacityBlock.style.height = popup.scrollHeight;
-
 
         const popupCloseBtn = document.querySelector('.popup-write-us__close');
         const popupWriteUsWrapper = document.querySelector('.opacity');
