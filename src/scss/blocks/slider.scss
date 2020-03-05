@@ -3,6 +3,7 @@
   background-image: url("../img/bg-slider.png");
   background-position: center center;
   background-size: cover;
+  overflow-x: hidden;
 
   &__container {
     display: flex;
@@ -46,8 +47,6 @@
       padding-right: rem(10);
       padding-left: rem(10);
     }
-
-
   }
 
 

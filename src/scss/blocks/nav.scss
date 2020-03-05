@@ -3,23 +3,6 @@
 
   &__list {
     display: flex;
-
-    @media screen and (max-width: $large) {
-      flex-direction: column;
-      position: absolute;
-      width: 100%;
-      top: 100%;
-      left: 0;
-      background-color: $white;
-    }
-  }
-
-  &__item {
-    &:first-child {
-      @media screen and (max-width: $large) {
-        border-top: 1px solid $border-color;
-      }
-    }
   }
 
   &__link {
@@ -43,19 +26,13 @@
       line-height: rem(18);
     }
 
-    @media screen and (max-width: $large) {
-      display: block;
-      padding: rem(14) rem(20);
-      border-bottom: 1px solid $border-color;
-    }
-
     @media screen and (min-width: $medium) {
       font-size: rem(14);
       line-height: rem(18);
     }
 
     @media screen and (min-width: $large) {
-      font-size: rem(12);
+      font-size: rem(11.5);
       line-height: rem(18);
     }
 
@@ -69,15 +46,36 @@
       line-height: rem(24);
     }
   }
+}
 
-  &.active {
-    @media screen and (max-width: $large) {
-      display: flex;
+@media screen and (max-width: $large) {
+  .nav__list {
+    flex-direction: column;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    background-color: $white;
+  }
+
+  &__item {
+    &:first-child {
+      border-top: 1px solid $border-color;
     }
   }
 
-  @media screen and (max-width: $large) {
+  .nav__link {
+    display: block;
+    padding: rem(14) rem(20);
+    border-bottom: 1px solid $border-color;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .nav {
     display: none;
   }
-}
 
+}

@@ -7,17 +7,6 @@
   &__iframe {
     width: 100%;
     min-height: rem(470);
-
-    @media screen and (max-width: $medium) {
-      display: none;
-    }
-  }
-
-  &__container {
-    @media screen and (max-width: $medium) {
-      padding-top: rem(80);
-      padding-bottom: rem(80);
-    }
   }
 
   &__wrapper {
@@ -27,15 +16,6 @@
     border-radius: rem(8);
     position: absolute;
     top: rem(80);
-
-    @media screen and (max-width: $medium) {
-      position: static;
-    }
-
-    @media screen and (max-width: $small) {
-      width: 100%;
-      padding: rem(30);
-    }
   }
 
   &__title {
@@ -47,14 +27,6 @@
   &__text {
     width: rem(345);
     padding-bottom: rem(12);
-
-    @media screen and (max-width: $large) {
-      width: rem(300);
-    }
-
-    @media screen and (max-width: $small) {
-      width: auto;
-    }
   }
 
   &__phone {
@@ -80,10 +52,53 @@
       transform: translateY(rem(-8));
       background-image: url("../img/mail.svg");
     }
+  }
+}
 
-    @media screen and (max-width: 400px) {
+@media screen and (max-width: 400px) {
+  .contacts__btn {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: $small) {
+
+  .contacts {
+    &__wrapper {
       width: 100%;
-      margin: 0 auto;
+      padding: rem(30);
+    }
+
+    &__text {
+      width: auto;
+    }
+
+  }
+}
+
+@media screen and (max-width: $medium) {
+
+  .contacts {
+    &__iframe {
+      display: none;
+    }
+
+    &__container {
+      padding-top: rem(80);
+      padding-bottom: rem(80);
+    }
+
+    &__wrapper {
+      position: static;
+    }
+  }
+}
+
+@media screen and (max-width: $large) {
+  .contacts {
+    &__text {
+      width: rem(300);
     }
   }
 }

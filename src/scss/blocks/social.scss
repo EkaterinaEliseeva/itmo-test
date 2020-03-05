@@ -2,13 +2,6 @@
   font-size: rem(13);
   line-height: rem(18);
 
-  @media screen and (max-width: 900px) {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
   &__list {
     display: flex;
     margin-top: rem(8);
@@ -38,4 +31,14 @@
       color: darken($bg-social, 50%);
     }
   }
+}
+
+@media screen and (max-width: 900px) {
+  .social {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
 }

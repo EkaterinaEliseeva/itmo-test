@@ -6,10 +6,6 @@
     background-color: $white;
     opacity: 1;
     z-index: 2;
-
-    @media screen and (min-width: $large) {
-      position: static;
-    }
   }
 
   &__wrapper {
@@ -27,25 +23,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
-    @media screen and (max-width: $small) {
-      padding: 0 rem(10);
-    }
-
-    @media screen and (max-width: $large) {
-      position: relative;
-    }
   }
 
   &__logo {
     height: rem(16);
     width: auto;
-  }
-
-  &__logo-hexagon {
-    @media screen and (max-width: $small) {
-      width: rem(46);
-    }
   }
 
   &__switch-lang {
@@ -83,33 +65,14 @@
     padding-left: rem(10);
     width: auto;
     padding-right: rem(20);
-
-    @media screen and (min-width: $small) {
-      width: auto;
-      font-size: rem(18);
-      line-height: rem(18);
-      padding-left: rem(16);
-    }
-
-    @media screen and (min-width: $large) {
-      font-size: rem(20);
-      line-height: rem(20);
-    }
-
-    @media screen and (min-width: 1100px) {
-      font-size: rem(22);
-      line-height: rem(22);
-    }
-
-    @media screen and (min-width: $extraLarge) {
-      font-size: rem(28);
-      line-height: rem(28);
-    }
-
   }
 
   &__burger {
     cursor: pointer;
+
+    span {
+      display: block;
+    }
 
     .b1,
     .b2,
@@ -138,15 +101,66 @@
     &.active .b3 {
       width: rem(36);
     }
+  }
+}
+
+@media screen and (max-width: $small) {
+  .header__container {
+    padding: 0 rem(10);
+  }
+
+  .header__logo-hexagon {
+    width: rem(46);
+  }
+
+}
+
+@media screen and (min-width: $small) {
+  .header__title {
+    width: auto;
+    font-size: rem(18);
+    line-height: rem(18);
+    padding-left: rem(16);
+  }
+}
+
+@media screen and (max-width: $large) {
+  .header__container {
+    position: relative;
+  }
+}
+
+@media screen and (min-width: $large + 1) {
+  .header__wrapper_sticky {
+    position: static;
+  }
+
+  .header__title {
+    font-size: rem(20);
+    line-height: rem(20);
+  }
+
+  .header__burger {
 
     &.active {
-      @media screen and (min-width: $large) {
-        display: block;
-      }
+      display: block;
     }
 
-    @media screen and (min-width: $large) {
-      display: none;
-    }
+    display: none;
+  }
+}
+
+
+@media screen and (min-width: 1100px) {
+  .header__title {
+    font-size: rem(22);
+    line-height: rem(22);
+  }
+}
+
+@media screen and (min-width: $extraLarge) {
+  .header__title {
+    font-size: rem(28);
+    line-height: rem(28);
   }
 }

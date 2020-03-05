@@ -11,32 +11,11 @@
       margin: 0 auto;
       padding-right: 0;
       padding-left: 0;
-
-      @media screen and (max-width: $large) {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      @media screen and (max-width: $medium - 1) {
-        width: auto;
-        padding: 0 30px;
-      }
-
     }
   }
 
   &__copyright {
     width: calc(100% / 3 - 30px);
-
-    @media screen and (max-width: $large) {
-      width: 100%;
-      padding-bottom: rem(20);
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
   }
 
   &__copyright-info {
@@ -44,10 +23,6 @@
     line-height: rem(24);
     opacity: 0.5;
     width: rem(280);
-
-    @media screen and (max-width: 900px) {
-      margin: 0 auto;
-    }
   }
 
   &__logo {
@@ -58,19 +33,6 @@
 
   &__contacts-wrapper {
     width: calc(100% / 3 - 130px);
-
-
-    @media screen and (max-width: $large) {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      padding-top: rem(20);
-      justify-content: center;
-      flex-direction: column;
-      text-align: center;
-
-    }
-
   }
 
   &__bottom {
@@ -79,16 +41,6 @@
     &-container {
       display: flex;
       justify-content: space-between;
-
-      @media screen and (max-width: $large) {
-        flex-wrap: wrap;
-        justify-content: center;
-      }
-
-      @media screen and (max-width: $medium - 1) {
-        width: auto;
-        padding: 0 30px;
-      }
     }
 
     a {
@@ -99,19 +51,76 @@
       line-height: rem(18);
       padding: rem(10) 0;
 
-
-
-      @media screen and (max-width: $large) {
-        width: 100%;
-        text-align: center;
-      }
-
       &:hover,
       &:active {
         opacity: 1;
       }
     }
 
+  }
+
+}
+
+@media screen and (max-width: $medium - 1) {
+
+  .footer {
+    &__bottom-container {
+      width: auto;
+      padding: 0 30px;
+    }
+
+    &__top-container {
+      width: auto;
+      padding: 0 30px;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .footer__copyright-info {
+    margin: 0 auto;
+  }
+}
+
+
+@media screen and (max-width: $large) {
+  .footer {
+    &__bottom {
+      a {
+        width: 100%;
+        text-align: center;
+      }
+
+      &-container {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+    }
+
+
+    &__copyright {
+      width: 100%;
+      padding-bottom: rem(20);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__top-container {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    &__contacts-wrapper {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding-top: rem(20);
+      justify-content: center;
+      flex-direction: column;
+      text-align: center;
+    }
   }
 
 }

@@ -3,10 +3,6 @@
 
   &__container {
     width: rem(800);
-
-    @media screen and (max-width: $large) {
-      width: auto;
-    }
   }
 
   &__title {
@@ -34,9 +30,7 @@
     padding: rem(24) rem(32);
     position: relative;
 
-    @media screen and (max-width: $small){
-      padding: rem(24) rem(60) rem(24) rem(24);
-    }
+
 
     &:hover {
       opacity: 0.7;
@@ -66,12 +60,25 @@
     display: none;
     padding: 0 rem(104) rem(24) rem(32);
 
-    @media screen and (max-width: $small) {
-      padding: 0 rem(32) rem(24) rem(32);
-    }
-
     &.active {
       display: block;
     }
+  }
+}
+
+
+@media screen and (max-width: $small) {
+  .disciplines__name {
+    padding: rem(24) rem(60) rem(24) rem(24);
+  }
+
+  .disciplines__description {
+    padding: 0 rem(32) rem(24) rem(32);
+  }
+}
+
+@media screen and (max-width: $large) {
+  .disciplines__container {
+    width: auto;
   }
 }

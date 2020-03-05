@@ -11,96 +11,93 @@
   align-items: center;
   justify-content: center;
 
-  @media screen and (max-width: $large) {
-    top: calc(100% - 70px);
-  }
-
-  @media screen and (max-width: $medium - 1) {
-    top: 50%;
-  }
-
-  @media screen and (max-width: $small) {
-    top: calc(100% - 60px);
-  }
-
-
   &:hover,
   &:active {
     opacity: 0.7;
-  }
-
-  &_left {
-
-    @media screen and (max-width: $medium - 1) {
-      left: rem(60);
-    }
-
-    @media screen and (max-width: $small) {
-      left: 50%;
-      transform: translateX(rem(-50));
-    }
-
-    @media screen and (min-width: $medium) {
-      left: 50%;
-      transform: translateX(rem(-50));
-    }
-
-    @media screen and (min-width: $large) {
-      left: 0;
-      transform: none;
-    }
-
-    @media screen and (min-width: $extraLarge) {
-      left: 0;
-    }
-
-    @media screen and (min-width: 1600px) {
-      left: rem(-60);
-    }
-
   }
 
   &_right {
     img {
       transform: rotate(180deg);
     }
+  }
+}
 
-    @media screen and (max-width: $medium - 1) {
+
+@media screen and (max-width: $large) {
+  .arrow {
+    top: calc(100% - 70px);
+  }
+}
+
+
+@media screen and (max-width: $medium - 1) {
+  .arrow {
+    top: 50%;
+
+    &_left {
+      left: rem(60);
+    }
+
+    &_right {
       right: rem(60);
     }
-
-    @media screen and (max-width: $small) {
-      right: 50%;
-      transform: translateX(rem(50));
-    }
-
-    @media screen and (min-width: $medium) {
-      right: 50%;
-      transform: translateX(rem(50));
-    }
-
-    @media screen and (min-width: $large) {
-      right: 0;
-      transform: none;
-    }
-
-
-    @media screen and (min-width: $extraLarge) {
-      right: 0;
-    }
-
-    @media screen and (min-width: 1600px) {
-      right: rem(-60);
-    }
-
-
-
-
-
-
-
-
-
-
   }
+}
+
+@media screen and (max-width: $small) {
+  .arrow {
+    top: calc(100% - 60px);
+
+    &_left {
+      left: 50%;
+      transform: translateX(rem(-50));
+    }
+
+    &_right {
+      right: 50%;
+      transform: translateX(rem(50));
+    }
+  }
+}
+
+
+@media screen and (min-width: $medium) {
+
+  .arrow_left {
+    left: 50%;
+    transform: translateX(rem(-50));
+  }
+
+  .arrow_right {
+    right: 50%;
+    transform: translateX(rem(50));
+  }
+
+}
+
+@media screen and (min-width: $large) {
+
+  .arrow_left {
+    left: 0;
+    transform: none;
+  }
+
+  .arrow_right {
+    right: 0;
+    transform: none;
+  }
+
+}
+
+@media screen and (min-width: 1600px) {
+
+  .arrow_left {
+    left: rem(-60);
+  }
+
+  .arrow_right {
+    left: rem(-60);
+  }
+
 }

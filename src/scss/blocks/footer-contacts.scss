@@ -4,11 +4,13 @@
   line-height: rem(24);
   padding-bottom: rem(24);
 
-  @media screen and (max-width: $large) {
-    padding-bottom: rem(14);
-  }
-
   .phone {
     color: $white;
+  }
+}
+
+@media screen and (max-width: $large) {
+  .footer-contacts {
+    padding-bottom: rem(14);
   }
 }
